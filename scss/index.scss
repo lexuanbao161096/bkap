@@ -47,6 +47,16 @@ p{
     padding: 20px auto;
 }
 
+.btn-common{
+    padding: 6px 20px;
+    background: #164FA3;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+}
 .viewmore-btn {
     min-width: 115px;
     padding: 0 20px;
