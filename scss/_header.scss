@@ -32,6 +32,7 @@
                     &:hover{
                         color: #149BD7;
                     }
+                    font-size: 13px;
                 }
                 &:hover{
                     .sub-menu{
@@ -75,6 +76,12 @@
             font-size: 12px;
         }
     }
+    .background-logo{
+        width: 220px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
 }
 
 
@@ -107,6 +114,7 @@
     color: #fff;
     width: 40px;
     height: 40px;
+    z-index: 999;
     div{
         align-items: center;
         justify-content: center;
@@ -194,14 +202,11 @@
     display: none;
 }
 @media (max-width:991px) {
-    // .header-menu-mobile {
-    //     display: block;
-    // }
-    .header-social{
-        // display: none;
-    }
     .header-bottom,.header-top{
         display: none;
+    }
+    .home-banner{
+        height: unset;
     }
     .header-bottom-ipad{
         display: none;
@@ -254,8 +259,11 @@
 }
 
 @media (max-width:575px){
-    .header .header-left,.header-social,.scrolltoTop{
+    .header .header-left,.header-social,.scrolltoTop,.header .background-logo{
         display: none !important;
+    }
+    .section-text__title span{
+        padding-left: 70px;
     }
     .ipad-menu{
         position: fixed;

@@ -7,17 +7,24 @@
 
             if (height > 100) {
                 $(".header").addClass('fix-header');
+                $('.background-logo').hide();
             } else {
                 $(".header").removeClass('fix-header');
+                $('.background-logo').show();
             }   
             
             if (height > 100) {
                 $(".scrolltoTop").fadeIn();
             } else {
                 $(".scrolltoTop").fadeOut();
-            }   
-        });
+            }
 
+        });
+        $(".scrolltoTop").click(function (event) {
+            event.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
         $('.header-bottom-ipad li').click(function(){
           $(this).find('.sub-menu').slideToggle();
         })
@@ -52,7 +59,7 @@ new Swiper('.home-banner-swiper', {
  
 });
  new Swiper('.invest-field-swiper', {
-  spaceBetween: 20,
+  // spaceBetween: 20,
   slidesPerView: 4,
   // autoplay: {
   //     delay: 5000,

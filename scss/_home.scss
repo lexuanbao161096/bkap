@@ -1,5 +1,11 @@
 .home-banner{
-    // height: 100vh;
+    height: 100vh;
+    .swiper-container{
+        height: 100%;
+        img{
+            object-fit: cover;
+        }
+    }
 }
 
 
@@ -71,6 +77,9 @@
         bottom: 55px;
         left: 25px;
         color: #ffffffcc;
+        .invest-field__index{
+            padding-bottom: 10px;
+        }
     }
     .invest-field__name{
         font-size: 22px;
@@ -82,12 +91,18 @@
 }
 
 .section-text__title{
-    font-size: 30px;
+    font-size: 36px;
+    font-weight: 600;
     color:#fff;
+    span{
+        padding-left: 30px;
+    }
 }
 .section-text__label {
     color: #ffffff99;
-    margin-top: 10px;
+    // margin-top: 10px;
+    font-size: 13px;
+    padding-left: 15px;
 }
 // Section Project
 .project-section{
@@ -111,7 +126,7 @@
     }
     
     .home-news-project-hightlight {
-        width: 55%;
+        width: 45%;
         padding-right: 50px;
         position: relative;
         z-index: 500;
@@ -133,7 +148,7 @@
         }
     }
     .home-news-project-list {
-        width: 45%;
+        width: 55%;
         position: relative;
         top: auto;
         left: auto;
@@ -144,6 +159,12 @@
         // width: 60%;
         // float: left;
         .swiper-slide{
+            .invest-field__type{
+                margin-bottom: 10px;
+            }
+            .invest-field__name{
+                font-size: 12px;
+            }
             &:hover{
                 
                 .invest-field__item{

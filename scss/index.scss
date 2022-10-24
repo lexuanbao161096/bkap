@@ -2,8 +2,7 @@
 @import "../scss/common/common";
 @import "../scss/common/reset";
 @import "../scss/common/grid";
-@import "../scss/header";
-@import "../scss/footer";
+
 @import "../scss/home";
 @import "../scss/tintuc";
 @import "../scss/bantin";
@@ -13,7 +12,8 @@
 @import "../scss/partner";
 @import "../scss/leader";
 @import "../scss/contact";
-
+@import "../scss/header";
+@import "../scss/footer";
 html{
     font-family: "Roboto", sans-serif;
     
