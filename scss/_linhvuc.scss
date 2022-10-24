@@ -1,0 +1,95 @@
+.field{
+    padding: 40px 0px;
+    .field-item{
+        box-shadow: 0 0 10px 0 rgba(0 ,0 ,0,0.2);
+        margin-bottom: 25px;
+        img{
+            width: 50%;
+            object-fit: cover;
+        }
+        .content{
+            padding: 30px 40px;
+        }
+        .number {
+            font-size: 38px;
+            color: $global_color;
+            position: relative;
+            font-weight: 600;
+            margin-bottom: 40px;
+            &:before {
+                content: "";
+                position: absolute;
+                background: $global_color;
+                width: 120px;
+                height: 1px;
+                bottom: 13px;
+                left: -120px;
+            }
+        }
+        .text-title {
+            font-size: 24px;
+            color: $global_color;
+            text-transform: uppercase;
+            padding-bottom: 30px;
+            font-weight: 600;
+        }
+        .the-content{
+            padding-bottom: 25px;
+            color: #66717A;
+        }
+       
+    }
+    .field-item2{
+        .number{
+            &::before{
+                left: auto;
+                right: -120px;
+            }
+        }
+        .content{
+            text-align: right;
+            padding: 40px;
+        }
+    }
+}
+@media (max-width:991px){
+    .field {
+        .field-item {
+            .content{
+                padding: 15px;
+            }
+            .number{
+                margin-bottom: 10px;
+            }
+            .text-title{
+                padding-bottom: 10px;
+                font-size: 22px;
+            }
+            .the-content{
+                padding-bottom: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width:575px){
+    .field{
+        .field-item{
+            flex-direction: column;
+            .content{
+                text-align: center;
+            }
+            img{
+                width: 100%;
+            }
+            .number{
+                &:before{
+                    bottom: -2px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.company-section{
+    padding: 40px 0px;
+    .item{
+        border: 1px solid #eee;
+        gap: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        &:hover{
+            box-shadow: 0 0 10px 0 rgba(0 ,0 ,0,0.2);
+            cursor: pointer;
+        }
+    }
+    .title{
+        font-size: 19px;
+        color: $global_color;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .detail{
+        font-size: 15px;
+        color: #66717A;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:575px){
+    .company-section {
+        .item{
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 10px;
+            gap: 10px;
+            .title{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .detail{
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+}

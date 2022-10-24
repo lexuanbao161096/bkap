@@ -1,0 +1,52 @@
+.contact-us{
+    .contact-title{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    form{
+        width: 100%;
+        input{
+            width: 100%;
+            padding: 12px 22px;
+            background: #f5f5f5;
+            border: none;
+            margin-bottom: 30px;
+            border-radius: 3px;
+            outline: none;
+            height: 54px;
+            &:focus{
+                border: none;
+            }
+        }
+        textarea{
+            width: 100%;
+            border: 1px solid #e1e1e1;
+            padding: 20px;
+            outline: none;
+        }
+       
+    }
+    .btn-submit-contact{
+        margin: 30px 0px;
+        padding: 15px 45px;
+        background: $global_color;
+        color: #fff;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            background: #103875;
+        }
+    }
+    .address{
+        background:$global_color;
+        border-radius: 16px;
+        padding: 15px;
+        color: #fff;
+
+        ul li{
+            color: #fff;
+            padding: 10px 0px;
+        }
+    }
+}

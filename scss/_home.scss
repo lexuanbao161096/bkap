@@ -1,0 +1,339 @@
+.home-banner{
+    // height: 100vh;
+}
+
+
+// Invest Section
+.invest-section{
+    height: 750px;
+    min-height: 580px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    .swiper-container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .invest-field__desc {
+        background-size: cover;
+        background-position: center center;
+        width: 20%;
+        position: relative;
+        height: 100%;
+        padding: 78px 40px;
+        background:$global_color;
+    }
+    .invest-field__content {
+        height: 100%;
+        width: 80%;
+        position: relative;
+    }
+    .invest-field__item {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        transition: all 0.3s ease;
+        &:before{
+            // display: none;
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #0051A4 100%);
+        }
+    }
+    .swiper-slide{
+        height: 100%;
+       
+        &:hover{
+            transition: all 0.3s ease;
+            .invest-field__item{
+                &::before{
+                    // display: block;
+                    opacity: 1;
+                    transition: all .5s ease-in-out;
+                }
+            }
+        }
+    }
+    .invest-field__text {
+        position: absolute;
+        z-index: 20;
+        display: block;
+        right: 25px;
+        bottom: 55px;
+        left: 25px;
+        color: #ffffffcc;
+    }
+    .invest-field__name{
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    .invest-field__type{
+        margin-bottom: 20px;
+    }
+}
+
+.section-text__title{
+    font-size: 30px;
+    color:#fff;
+}
+.section-text__label {
+    color: #ffffff99;
+    margin-top: 10px;
+}
+// Section Project
+.project-section{
+    padding: 77px 0px 47px 0;
+    position: relative;
+    margin-left: 118px;
+    &:before{
+        content: "";
+        background-image: url(https://www.flc.vn/wp-content/themes/flc/assets/images/home/bg3.png);
+        position: absolute;
+        background-position: center center;
+        background-size: cover;
+        width: 528px;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: -118px;
+    }
+    .project-title{
+        margin-bottom: 20px;
+    }
+    
+    .home-news-project-hightlight {
+        width: 55%;
+        padding-right: 50px;
+        position: relative;
+        z-index: 500;
+        // background-image: linear-gradient(to right, #006bb8, #fff, #fff, #fff);
+        background:#fff;
+        .item {
+            display: block;
+            height: 396px;
+            width: 100%;
+            position: relative;
+            
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        p{
+            padding: 10px;
+        }
+    }
+    .home-news-project-list {
+        width: 45%;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+    .home-news-project-swiper{
+        height:50%;
+        margin-bottom: 20px;
+        // width: 60%;
+        // float: left;
+        .swiper-slide{
+            &:hover{
+                
+                .invest-field__item{
+                    &::before{
+                        // display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            transition: all .5s ease-in-out;
+            &:before{
+                // display: none;
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #0051A4 100%);
+                transition: all .5s ease-in-out;
+                opacity: 0;
+            }
+        }
+        .invest-field__text{
+            position: absolute;
+            left: 24px;
+            bottom: 14px;
+            color: #fff;
+            // font-weight: bold;
+        }
+        
+    }
+    
+}
+
+
+// home-news
+.home-news{
+    padding: 30px 0px;
+    .section-text__title,.section-text__label {
+        color: $global_color;
+    }
+    .home-news-title{
+        margin-bottom: 20px;
+    }
+    .home-news-left{
+        width: calc((100% / 12) * 2);
+        padding: 25px 18px 0px 40px;
+        margin-top: 25px;
+        ul li{
+            font-size: 12px;
+            color: $global_color;
+            padding-bottom: 15px;
+            font-weight: 600;
+            i{
+                padding-right: 10px;
+            }
+        }
+    }
+    .news-thumbnail{
+        width: calc((100% / 12) * 10);
+        .swiper-slide{
+           padding: 10px 0px;
+        }
+    }
+    .swiper-slide .item{
+        box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+        padding: 10px 0px;
+        .item-detail{
+            padding: 13px;
+        }
+        .title{
+            font-size:16px;
+            color: $global_color;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .date{
+            font-size: 13px;
+            color: #999999;
+            margin-bottom: 10px;
+        }
+        .detail{
+            font-size: 14px;
+            color: #66717A;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 25px;
+            -webkit-line-clamp: 2;
+            height: 55px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+
+@media (max-width:991px){
+    .invest-section .invest-field__desc,.project-section{
+        padding: 20px;
+    }
+    .project-section{
+        margin-left: 0px;
+    }
+    .project-section .home-news-project-hightlight{
+        padding-right: 20px;
+        .item{
+            height: 200px;
+        }
+    } 
+    .home-news{
+        .home-news-left{
+            width: 40%;
+        }
+        .news-thumbnail{
+            width: 60%;
+        }
+    } 
+    .invest-section{
+        height: 400px;
+        min-height: unset;
+    }
+}
+@media (max-width:575px){
+    .project-section{
+        &::before{
+            width: 100%;
+            left: 0px;
+        }
+    }
+    .invest-section{
+        height: unset;
+        flex-direction: column;
+        .invest-field__desc,.invest-field__content{
+            width: 100%;
+        }
+        .section-text{
+            text-align: center;
+        }
+        .invest-field__content{
+            height: 400px;
+        }
+    } 
+    .project-section{
+        .project-title{
+            text-align: center;
+        }
+        .home-project{
+            flex-direction: column;
+        }
+        .home-news-project-hightlight,.home-news-project-list{
+            width: 100%;
+        }
+        .home-news-project-hightlight{
+            padding-right: 0px;
+            margin-bottom: 20px;
+        }
+        .home-news-project-list{
+            height: 400px;
+        }
+    }
+    .home-news{
+        flex-direction: column;
+        .home-news-left,.news-thumbnail{
+            width: 100%;
+        }
+        .home-news-left{
+            padding: 0px 0px 20px;
+            ul{
+                li{
+                    background: $global_color;
+                    color: #fff;
+                    padding: 20px;
+                    border-bottom: 1px solid;
+                }
+            }
+            .home-news-title{
+                padding: 0px 20px;
+            }
+        }
+        .news-thumbnail{
+            padding: 0px 15px;
+        }
+    }
+}
