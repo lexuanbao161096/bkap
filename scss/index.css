@@ -2143,6 +2143,7 @@ button {
   color: #164FA3;
   padding-bottom: 15px;
   font-weight: 600;
+  line-height: 24px;
 }
 .home-news .home-news-left ul li i {
   padding-right: 10px;
@@ -2158,7 +2159,7 @@ button {
   padding: 10px 0px;
 }
 .home-news .swiper-slide .item .item-detail {
-  padding: 13px;
+  padding: 8px;
 }
 .home-news .swiper-slide .item .title {
   font-size: 16px;
@@ -3050,6 +3051,9 @@ button {
     font-size: 20px;
   }
 }
+footer .logo-footer {
+  margin-bottom: 20px;
+}
 footer .footer-top {
   width: 100%;
   height: 100%;
@@ -3062,13 +3066,17 @@ footer .footer-top {
 footer .footer-top ul li a {
   color: #fff;
   font-size: 12px;
-  padding: 6px 0px;
+  padding: 0px 0px 6px;
   display: inline-block;
+  transition: all 0.3s ease;
+}
+footer .footer-top ul li a:hover {
+  color: #149BD7;
 }
 footer .footer-top h2 {
   font-size: 14px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 footer .footer-top .footer-title {
   font-size: 11px;
@@ -3077,7 +3085,10 @@ footer .footer-top .footer-title {
   color: rgba(255, 255, 255, 0.6);
 }
 footer .footer-top .footer-info {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+}
+footer .footer-top .footer-info:first-child {
+  margin-top: 15px;
 }
 footer .footer-top .footer-info a {
   font-size: 14px;
@@ -3085,16 +3096,20 @@ footer .footer-top .footer-info a {
 }
 footer .footer-top .footer-address {
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
 }
 footer .contact-form .label {
   font-size: 14px;
   text-align: right;
   color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 footer .contact-form .contact-desc {
   text-align: right;
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.6);
 }
 footer .contact-form .form-group input {
@@ -3106,6 +3121,7 @@ footer .contact-form .form-group input {
   margin-bottom: 10px;
   width: 100%;
   color: #fff;
+  font-size: 15px;
 }
 footer .contact-form .btn-submit {
   text-transform: uppercase;
@@ -3117,6 +3133,7 @@ footer .contact-form .btn-submit {
   border: none;
   display: flex;
   margin-left: auto;
+  letter-spacing: 2px;
 }
 footer .footer-center {
   padding: 15px 40px;
@@ -3127,6 +3144,7 @@ footer .footer-bot {
   overflow: hidden;
   background: #fff;
   font-size: 12px;
+  padding-left: 25px;
 }
 footer #menu-footer-menu li {
   padding: 15px 20px;
@@ -3135,6 +3153,7 @@ footer #menu-footer-menu li {
 }
 footer #menu-footer-menu a {
   text-transform: uppercase;
+  color: #173E62;
 }
 footer .copyright {
   padding: 15px 20px;
@@ -3207,10 +3226,6 @@ footer .copyright {
 }
 html {
   font-family: "Roboto", sans-serif;
-}
-
-p {
-  line-height: 30px;
 }
 
 .section-post h1, .section-post h2, .section-post h3, .section-post h4, .section-post h5, .section-post h6 {
