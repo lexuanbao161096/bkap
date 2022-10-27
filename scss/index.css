@@ -1967,6 +1967,7 @@ button {
   height: 100%;
   padding: 78px 40px;
   background: #164FA3;
+  padding-left: 50px;
 }
 .invest-section .invest-field__content {
   height: 100%;
@@ -2035,12 +2036,16 @@ button {
   color: rgba(255, 255, 255, 0.6);
   font-size: 13px;
   padding-left: 15px;
+  letter-spacing: 2px;
 }
 
 .project-section {
   padding: 77px 0px 47px 0;
   position: relative;
-  margin-left: 118px;
+  margin-left: 50px;
+}
+.project-section .home-project {
+  margin-left: 50px;
 }
 .project-section:before {
   content: "";
@@ -2075,7 +2080,8 @@ button {
   height: 100%;
 }
 .project-section .home-news-project-hightlight .title {
-  padding: 10px;
+  padding: 10px 25px;
+  font-size: 14px;
 }
 .project-section .home-news-project-list {
   width: 55%;
@@ -2127,6 +2133,9 @@ button {
 .home-news {
   padding: 30px 0px;
 }
+.home-news ul {
+  padding-top: 30px;
+}
 .home-news .section-text__title, .home-news .section-text__label {
   color: #164FA3;
 }
@@ -2135,7 +2144,7 @@ button {
 }
 .home-news .home-news-left {
   width: 16.6666666667%;
-  padding: 25px 18px 0px 40px;
+  padding: 25px 18px 0px 50px;
   margin-top: 25px;
 }
 .home-news .home-news-left ul li {
@@ -2184,6 +2193,10 @@ button {
   -webkit-box-orient: vertical;
 }
 
+.home-banner-logo {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .invest-section .invest-field__desc, .project-section {
     padding: 20px;
@@ -2201,6 +2214,9 @@ button {
   .project-section .home-news-project-hightlight .title {
     flex-direction: column;
   }
+  .project-section .home-news-project-hightlight .title p {
+    margin-bottom: 10px;
+  }
   .home-news .home-news-left {
     width: 40%;
   }
@@ -2210,6 +2226,9 @@ button {
   .invest-section {
     height: 400px;
     min-height: unset;
+  }
+  .home-banner {
+    height: unset;
   }
 }
 @media (max-width: 575px) {
@@ -2230,11 +2249,16 @@ button {
   .invest-section .invest-field__content {
     height: 400px;
   }
+  .project-section {
+    padding: 0px;
+  }
   .project-section .project-title {
     text-align: center;
+    padding-top: 10px;
   }
   .project-section .home-project {
     flex-direction: column;
+    margin-left: 0px;
   }
   .project-section .home-news-project-hightlight, .project-section .home-news-project-list {
     width: 100%;
@@ -2258,7 +2282,7 @@ button {
   .home-news .home-news-left ul li {
     background: #164FA3;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px;
     border-bottom: 1px solid;
   }
   .home-news .home-news-left .home-news-title {
@@ -2266,6 +2290,20 @@ button {
   }
   .home-news .news-thumbnail {
     padding: 0px 15px;
+  }
+  .home-banner {
+    height: 100vh;
+  }
+  .home-banner .swiper-container img {
+    height: 100%;
+  }
+  .home-banner-logo {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
   }
 }
 .news-container {
@@ -2938,12 +2976,13 @@ button {
   display: none;
 }
 
+#btn-show-search i {
+  color: #fff;
+}
+
 @media (max-width: 991px) {
   .header-bottom, .header-top {
     display: none;
-  }
-  .home-banner {
-    height: unset;
   }
   .header-bottom-ipad {
     display: none;
@@ -2970,11 +3009,11 @@ button {
     display: block !important;
   }
   .humberger .line {
-    width: 20px;
+    width: 22px;
     height: 2px;
     background: #fff;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
   }
@@ -3006,22 +3045,30 @@ button {
     height: 50px;
     top: unset;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     padding: 0px 15px;
+  }
+  .ipad-menu .humberger {
+    margin-right: 30px;
   }
   .social-block-mobile {
     display: block;
   }
   .social-block-mobile li {
-    padding: 0px 20px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 18px;
   }
   .social-block-mobile li:last-child {
     padding-right: 0px;
   }
   .social-block-mobile li a i {
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
   }
   .header.fix-header {
     height: 0px;
@@ -3049,6 +3096,22 @@ button {
     top: 50px;
     right: 50px;
     font-size: 20px;
+  }
+  .header-language-ipad {
+    padding: 0px;
+  }
+  .header-language-ipad li {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
+  .header-language-ipad li i {
+    font-size: 18px;
+  }
+  .search-wrapper input {
+    font-size: 18px;
   }
 }
 footer .logo-footer {
@@ -3098,6 +3161,10 @@ footer .footer-top .footer-address {
   color: #fff;
   font-size: 10px;
 }
+footer .contact-form {
+  max-width: 340px;
+  margin-left: auto;
+}
 footer .contact-form .label {
   font-size: 14px;
   text-align: right;
@@ -3117,11 +3184,13 @@ footer .contact-form .form-group input {
   border: none;
   padding: 8px 12px;
   text-align: right;
-  background-color: #164FA3;
+  background-color: #0051A4;
   margin-bottom: 10px;
   width: 100%;
   color: #fff;
   font-size: 15px;
+  outline: none;
+  height: 30px;
 }
 footer .contact-form .btn-submit {
   text-transform: uppercase;
@@ -3138,6 +3207,7 @@ footer .contact-form .btn-submit {
 footer .footer-center {
   padding: 15px 40px;
   background: #023F76;
+  height: 50px;
 }
 footer .footer-bot {
   display: block;
@@ -3157,6 +3227,7 @@ footer #menu-footer-menu a {
 }
 footer .copyright {
   padding: 15px 20px;
+  color: #164FA3;
 }
 
 @media (max-width: 575px) {
@@ -3164,10 +3235,17 @@ footer .copyright {
     padding: 15px;
   }
   footer .footer-top ul li a {
-    font-size: 10px;
+    font-size: 9px;
+    padding-bottom: 4px;
   }
   footer .footer-top .footer-info a {
     font-size: 12px;
+  }
+  footer .footer-top .footer-info .footer-email {
+    font-size: 10px;
+  }
+  footer .footer-top .footer-address {
+    font-size: 9px;
   }
   footer .footer-menu {
     flex-direction: row-reverse;
@@ -3217,11 +3295,17 @@ footer .copyright {
     margin-bottom: 50px;
   }
   footer #menu-footer-menu li {
-    padding: 10px;
+    padding: 10px 0px;
     font-size: 10px;
+    flex: 1;
+    text-align: center;
   }
   footer .copyright {
     padding: 0px 0px 10px;
+    font-size: 10px;
+  }
+  footer .footer-bot {
+    padding-left: 0px;
   }
 }
 html {

@@ -29,6 +29,7 @@
         height: 100%;
         padding: 78px 40px;
         background:$global_color;
+        padding-left: 50px;
     }
     .invest-field__content {
         height: 100%;
@@ -103,12 +104,16 @@
     // margin-top: 10px;
     font-size: 13px;
     padding-left: 15px;
+    letter-spacing: 2px;
 }
 // Section Project
 .project-section{
     padding: 77px 0px 47px 0;
     position: relative;
-    margin-left: 118px;
+    margin-left: 50px;
+    .home-project {
+        margin-left: 50px;
+    }
     &:before{
         content: "";
         background-image: url(https://www.flc.vn/wp-content/themes/flc/assets/images/home/bg3.png);
@@ -144,7 +149,8 @@
             height: 100%;
         }
         .title{
-            padding: 10px;
+            padding: 10px 25px;
+            font-size: 14px;
         }
     }
     .home-news-project-list {
@@ -214,6 +220,9 @@
 // home-news
 .home-news{
     padding: 30px 0px;
+    ul{
+        padding-top: 30px;
+    }
     .section-text__title,.section-text__label {
         color: $global_color;
     }
@@ -222,7 +231,7 @@
     }
     .home-news-left{
         width: calc((100% / 12) * 2);
-        padding: 25px 18px 0px 40px;
+        padding: 25px 18px 0px 50px;
         margin-top: 25px;
         ul li{
             font-size: 12px;
@@ -271,7 +280,9 @@
         }
     }
 }
-
+.home-banner-logo{
+    display: none;
+}
 @media (max-width:991px){
     .invest-section .invest-field__desc,.project-section{
         padding: 20px;
@@ -287,6 +298,9 @@
         }
         .title{
             flex-direction: column;
+            p{
+                margin-bottom: 10px;
+            }
         }
     } 
     .home-news{
@@ -300,6 +314,9 @@
     .invest-section{
         height: 400px;
         min-height: unset;
+    }
+    .home-banner{
+        height: unset;
     }
 }
 @media (max-width:575px){
@@ -323,11 +340,14 @@
         }
     } 
     .project-section{
+        padding: 0px;
         .project-title{
             text-align: center;
+            padding-top: 10px;
         }
         .home-project{
             flex-direction: column;
+            margin-left: 0px;
         }
         .home-news-project-hightlight,.home-news-project-list{
             width: 100%;
@@ -351,7 +371,7 @@
                 li{
                     background: $global_color;
                     color: #fff;
-                    padding: 20px;
+                    padding: 10px 20px;
                     border-bottom: 1px solid;
                 }
             }
@@ -362,5 +382,19 @@
         .news-thumbnail{
             padding: 0px 15px;
         }
+    }
+    .home-banner{
+        height: 100vh;
+        .swiper-container img{
+            height: 100%;
+        }
+    }
+    .home-banner-logo{
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
     }
 }

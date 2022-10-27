@@ -47,6 +47,8 @@ footer{
         }
     }
     .contact-form{
+        max-width: 340px;
+        margin-left: auto;
         .label{
             font-size: 14px;
             text-align: right;
@@ -55,6 +57,7 @@ footer{
             text-transform: uppercase;
             margin-bottom: 10px;
             font-weight: 500;
+           
         }
         .contact-desc{
             text-align: right;
@@ -67,11 +70,13 @@ footer{
                 border: none;
                 padding: 8px 12px;
                 text-align: right;
-                background-color: $global_color;
+                background-color:#0051A4;
                 margin-bottom: 10px;
                 width: 100%;
                 color: #fff;
                 font-size: 15px;
+                outline: none;
+                height: 30px;
             }
         }
         .btn-submit{
@@ -90,6 +95,7 @@ footer{
     .footer-center {
         padding: 15px 40px;
         background: #023F76;
+        height: 50px;
     }
     .footer-bot {
         display: block;
@@ -112,6 +118,7 @@ footer{
     }
     .copyright{
         padding: 15px 20px;
+        color: $global_color;
     }
 }
 
@@ -120,12 +127,19 @@ footer{
         .footer-top{
             padding: 15px;
             ul li a{
-                font-size: 10px;
+                font-size: 9px;
+                padding-bottom: 4px;
             }
             .footer-info{
                 a{
                     font-size: 12px;
                 }
+                .footer-email{
+                    font-size: 10px;
+                }   
+            }
+            .footer-address{
+                font-size: 9px;
             }
         }
         .footer-menu{
@@ -175,12 +189,19 @@ footer{
             margin-bottom: 50px;
         }
         #menu-footer-menu li{
-            padding: 10px;
+            padding: 10px 0px;
             font-size: 10px;
+            flex: 1;
+            text-align: center;
         }
         .copyright {
             padding: 0px 0px 10px;
+            font-size: 10px;
+        }
+        .footer-bot{
+            padding-left: 0px;
         }
     }
+
 }
 
