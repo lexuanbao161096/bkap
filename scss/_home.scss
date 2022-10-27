@@ -106,6 +106,10 @@
     padding-left: 15px;
     letter-spacing: 2px;
 }
+.section-text__label.section-text__label2{
+    padding-left: 35px;
+
+}
 // Section Project
 .project-section{
     padding: 77px 0px 47px 0;
@@ -166,11 +170,21 @@
         // width: 60%;
         // float: left;
         .swiper-slide{
+            &:hover{
+                a{
+                    &::before{
+                         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #149BD7 100%);
+                    }
+                }
+            }
             .invest-field__type{
                 margin-bottom: 10px;
+                font-size: 12px;
+                font-weight: 500;
             }
             .invest-field__name{
                 font-size: 12px;
+                font-weight: 300;
             }
             &:hover{
                 
@@ -199,15 +213,16 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #0051A4 100%);
+                // background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #0051A4 100%);
                 transition: all .5s ease-in-out;
-                opacity: 0;
+                opacity: 0.3;
+                background: #000;
             }
         }
         .invest-field__text{
             position: absolute;
-            left: 24px;
-            bottom: 14px;
+            left: 31px;
+            bottom: 18px;
             color: #fff;
             // font-weight: bold;
         }
@@ -230,22 +245,26 @@
         margin-bottom: 20px;
     }
     .home-news-left{
-        width: calc((100% / 12) * 2);
+        width: 23%;
         padding: 25px 18px 0px 50px;
         margin-top: 25px;
         ul li{
             font-size: 12px;
-            color: $global_color;
+            color: #0051A4;
             padding-bottom: 15px;
             font-weight: 600;
-            line-height: 24px;
+            line-height: 30px;
+            transition: all 0.3s ease;
+            &:hover{
+                color: #149BD7;
+            }
             i{
                 padding-right: 10px;
             }
         }
     }
     .news-thumbnail{
-        width: calc((100% / 12) * 10);
+        width: 73%;
         .swiper-slide{
            padding: 10px 0px;
         }

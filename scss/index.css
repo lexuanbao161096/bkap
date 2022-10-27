@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -2039,6 +2039,10 @@ button {
   letter-spacing: 2px;
 }
 
+.section-text__label.section-text__label2 {
+  padding-left: 35px;
+}
+
 .project-section {
   padding: 77px 0px 47px 0;
   position: relative;
@@ -2093,11 +2097,17 @@ button {
   height: 50%;
   padding-bottom: 20px;
 }
+.project-section .home-news-project-swiper .swiper-slide:hover a::before {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #149BD7 100%);
+}
 .project-section .home-news-project-swiper .swiper-slide .invest-field__type {
   margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
 }
 .project-section .home-news-project-swiper .swiper-slide .invest-field__name {
   font-size: 12px;
+  font-weight: 300;
 }
 .project-section .home-news-project-swiper .swiper-slide:hover .invest-field__item::before {
   opacity: 1;
@@ -2119,14 +2129,14 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #0051A4 100%);
   transition: all 0.5s ease-in-out;
-  opacity: 0;
+  opacity: 0.3;
+  background: #000;
 }
 .project-section .home-news-project-swiper .invest-field__text {
   position: absolute;
-  left: 24px;
-  bottom: 14px;
+  left: 31px;
+  bottom: 18px;
   color: #fff;
 }
 
@@ -2143,22 +2153,26 @@ button {
   margin-bottom: 20px;
 }
 .home-news .home-news-left {
-  width: 16.6666666667%;
+  width: 23%;
   padding: 25px 18px 0px 50px;
   margin-top: 25px;
 }
 .home-news .home-news-left ul li {
   font-size: 12px;
-  color: #164FA3;
+  color: #0051A4;
   padding-bottom: 15px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 30px;
+  transition: all 0.3s ease;
+}
+.home-news .home-news-left ul li:hover {
+  color: #149BD7;
 }
 .home-news .home-news-left ul li i {
   padding-right: 10px;
 }
 .home-news .news-thumbnail {
-  width: 83.3333333333%;
+  width: 73%;
 }
 .home-news .news-thumbnail .swiper-slide {
   padding: 10px 0px;
@@ -2557,12 +2571,25 @@ button {
     transform: translateX(-50%);
   }
 }
+.about {
+  max-width: 1210px;
+}
 .about .main-title, .about .title {
   color: #164FA3;
 }
 .about .title {
   font-size: 40px;
   font-weight: 700;
+  text-align: center;
+  margin: 50px;
+}
+.about .section1 {
+  background-image: url(https://bkapgroup.com/wp-content/uploads/2022/02/abc.jpg);
+}
+.about .section1 .main-title {
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
 }
 .about .main-title {
   font-size: 30px;
@@ -2787,9 +2814,12 @@ button {
   width: 100%;
   padding: 5px 35px;
 }
+.header .header-right .header-bottom .menu-nav {
+  padding-left: 100px;
+}
 .header .header-right .header-bottom li {
   position: relative;
-  padding-right: 30px;
+  padding-right: 74px;
 }
 .header .header-right .header-bottom li a {
   color: #fff;
@@ -2805,7 +2835,7 @@ button {
 .header .header-right .header-bottom .sub-menu {
   display: none;
   position: absolute;
-  left: 50%;
+  left: calc(50% - 28px);
   background: #164FA3;
   white-space: nowrap;
   border-radius: 10px;
@@ -2982,7 +3012,7 @@ button {
 
 @media (max-width: 991px) {
   .header-bottom, .header-top {
-    display: none;
+    display: none !important;
   }
   .header-bottom-ipad {
     display: none;
@@ -3219,7 +3249,7 @@ footer .footer-bot {
 footer #menu-footer-menu li {
   padding: 15px 20px;
   color: #173E62;
-  border-right: 1px solid #eee;
+  border-right: 1px solid;
 }
 footer #menu-footer-menu a {
   text-transform: uppercase;
